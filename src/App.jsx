@@ -14,6 +14,10 @@ import Testimonials from './components/Testimonials';
 import Marquee from './components/Marquee';
 import Footer from './components/Footer';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Blog from './pages/Blog';
+import Contents from './pages/Contents';
+import Collabs from './pages/Collabs';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,15 +56,24 @@ function App() {
       <Grain />
       <Navbar />
       <main>
-        <Hero />
-        <IntroText />
-        <About />
-        <HorizontalScroll />
-        <Stats />
-        <Journey />
-        <Testimonials />
-        <Marquee />
-        <Footer />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <IntroText />
+              <About />
+              <HorizontalScroll />
+              <Stats />
+              <Journey />
+              <Testimonials />
+              <Marquee />
+              <Footer />
+            </>
+          } />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contents" element={<Contents />} />
+          <Route path="/collabs" element={<Collabs />} />
+        </Routes>
       </main>
     </>
   );

@@ -1,0 +1,41 @@
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  padding: 2rem 1rem;
+}
+.side-nav.open {
+  transform: translateX(0);
+}
+.side-nav .close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.side-nav nav ul {
+  list-style: none;
+  padding: 0;
+}
+.side-nav nav ul li {
+  margin: 2rem 0;
+}
+.side-nav nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.side-nav nav ul li a:hover {
+  text-decoration: underline;
+}
